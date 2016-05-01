@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>LDAP</title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.5/css/foundation.min.css" />
+    <link rel="stylesheet" href="ldap-shepherd.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+  </head>
+  <body>
+
+    <div id="app">
+    </div>
+
+    <!-- foundation javascript libs -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.3/fastclick.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation-essential/5.4.5/js/foundation/foundation.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation-essential/5.4.5/js/foundation/foundation.reveal.js"></script>
+
+    <script src="http://fb.me/react-0.12.2.js"></script>
+    <script src="out/goog/base.js" type="text/javascript"></script>
+    
+    <!-- cljsbuild compiler output, defines the dependencies on the various
+         modules-->
+    <script src="ldap-shepherd.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+      /* Load the main module */
+      goog.require("ldap_shepherd.main");
+
+      /* Repl specific dependencies */
+      goog.require("ldap_shepherd.piggieback_browser");
+
+    </script>
+
+    <!-- foundation reveals want to see a "data-reveal" attribute on the page, doesn't work otherwise. -->
+    <div style="display:none" data-reveal=""></div>
+
+    <script type="text/javascript">
+      $(document).foundation();
+    </script>
+  </body>
+</html>

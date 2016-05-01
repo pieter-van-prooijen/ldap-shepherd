@@ -1,0 +1,17 @@
+
+table.users, table.groups { width: 100% }
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.icon.delete {
+    /* Same as foundation buttons */
+    transition: fill 300ms ease-out 0s;
+    fill: #2ba6cb
+}
+
+.icon.delete:hover {
+    fill: #c60f13;
+}
