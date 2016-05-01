@@ -1,0 +1,11 @@
+# Put this file in /etc/ldap/slapd.d/cn=config
+# Don't forget to add olcModuleLoad: {<n>}sssvlv to /etc/ldap/slapd.d/cn=module{0}.ldif
+#
+# Increasing sssvlvMax etc. makes searches very slow for multiple requests ?
+# openldap doesn't seem to clean up old sorts when closing a connection
+dn: olcOverlay=sssvlv,olcDatabase={1}hdb
+objectclass: olcOverlayConfig
+objectclass: olcSssVlvConfig
+olcOverlay: sssvlv
+olcSssvlvMax: 1024
+olcSssvlvMaxPerConn: 1024
