@@ -32,7 +32,7 @@ wget --server-response --method=GET http://localhost:3000/groups?q=* --output-do
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2015 Pieter van Prooijen
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
